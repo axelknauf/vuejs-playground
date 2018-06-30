@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <show-something />
+    <b-button v-on:click="onButtonClick">Change Message</b-button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import ShowSomething from "@/components/ShowSomething.vue";
+import { CHANGE_MESSAGE } from "@/mutation-types.js";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    ShowSomething
+  },
+  methods: {
+    onButtonClick() {
+      console.log("Button clicked!");
+      this.$store.commit(CHANGE_MESSAGE, new Date());
+    }
   }
 };
 </script>
