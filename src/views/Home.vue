@@ -7,7 +7,7 @@
 
 <script>
 import ShowSomething from "@/components/ShowSomething.vue";
-import { CHANGE_MESSAGE } from "@/mutation-types.js";
+import { FETCH_NEW_PASSWORD } from "@/action-types.js";
 
 export default {
   name: "home",
@@ -17,7 +17,7 @@ export default {
   methods: {
     onButtonClick() {
       console.log("Button clicked!");
-      this.$store.commit(CHANGE_MESSAGE, new Date());
+      this.$store.dispatch(FETCH_NEW_PASSWORD);
     }
   }
 };

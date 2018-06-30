@@ -1,6 +1,6 @@
 <template>
   <div class="something">
-    <h3>Random: {{localStateRandomNumber}} - Message: {{ messageAsFunction }}</h3>
+    <h3>Random: {{localStateRandomNumber}} - Password: {{ messageAsFunction }}</h3>
   </div>
 </template>
 
