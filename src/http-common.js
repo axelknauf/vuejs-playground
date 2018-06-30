@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const DDG_HTTP = axios.create({
-  baseURL: "https://api.duckduckgo.com/q=",
+export const DUMMY_HTTP = axios.create({
+  baseURL: "http://localhost:3000/",
   headers: {}
 });
