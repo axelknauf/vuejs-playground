@@ -18,7 +18,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    // start /test/dummy-express-server.js for this to work
+    // start `node /test/dummy-express-server.js` for this to work
     [FETCH_NEW_PASSWORD]({ commit }) {
       DUMMY_HTTP.get()
         .then(response => {
